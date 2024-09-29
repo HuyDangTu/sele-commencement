@@ -1,5 +1,7 @@
 package UI;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -19,13 +21,24 @@ import org.openqa.selenium.WebElement;
 
 public class implicitWaits {
 
+	public static String browser = "Edge";
+	public static WebDriver driver;
+	
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws InterruptedException {
 		
-		//System.setProperty("webdriver.chrome.driver", "D:\\Download\\chrome-win32\\chrome-win32\\chrome.exe");
-		WebDriverManager.chromedriver().setup();
-		// TODO Auto-generated method stub
-		ChromeDriver driver = new ChromeDriver();
+			
+			if(browser.equals("Firefox")) {
+				WebDriverManager.firefoxdriver().setup();
+				 driver = new FirefoxDriver();
+			}else if(browser.equals("Chrome")) {
+				WebDriverManager.chromedriver().setup();
+				 driver = new ChromeDriver();
+			}else if (browser.equals("Edge")) {
+				WebDriverManager.edgedriver().setup();
+				 driver = new EdgeDriver();
+			}
+
 		driver.get("http://www.ebay.com");
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
