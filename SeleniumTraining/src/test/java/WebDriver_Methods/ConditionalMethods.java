@@ -44,12 +44,12 @@ public class ConditionalMethods {
 		
 		Thread.sleep(2000);
 		//click male check box 
-		femaleCheckBox.click();
-		System.out.println(maleCheckBox.isSelected()); //false
-		System.out.println(femaleCheckBox.isSelected()); //true
+		//femaleCheckBox.click();
+		//System.out.println(maleCheckBox.isSelected()); //false
+		//System.out.println(femaleCheckBox.isSelected()); //true
 	
-		Thread.sleep(1000);
-		driver.close();
+		//Thread.sleep(1000);
+		//driver.close();
 	}
 
 }
