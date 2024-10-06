@@ -27,3 +27,11 @@ public class HandleAuthenticationAleart {
 	}
 
 }
+
+
+//Frame is on the current web and contains some other elements(from, div)
+//Iframe is another web page which is embeded in the current web page
+//driver focus on current page, so, driver can take any action on the iframe
+//we have to switch to iframe, frame to perform actions
+
+
