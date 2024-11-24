@@ -15,11 +15,10 @@ public class jsExecutor {
 		
 		
 		EdgeDriver driver = new EdgeDriver();
-		
+	
+		// Register an driver variable by creating an instance of WebDriver (class)
 		//WebDriver driver =  new EdgeDriver();
-		
-		
-		
+	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
@@ -27,12 +26,14 @@ public class jsExecutor {
 		
 		//JavascriptExecutor js = (JavascriptExecutor)driver;
 		JavascriptExecutor js = driver;
-		//EdgeDriver is class extened from RemoteWebDriver
-		//RemoteWebDriver iss an implementation of JavaScriptExecutor Interface
+		//EdgeDriver is class extended from RemoteWebDriver
+		//RemoteWebDriver is an implementation of JavaScriptExecutor Interface
 		//There for we can directly assign driver to jsE
-		
-		//In the other hand, RemoteWebDriver is also an implementation of WebDriver Interface 
+		//In the other  hand, RemoteWebDriver is also an implementation of WebDriver Interface 
 		//So we have to convert driver to JSE
+		//Can apply JSE for many element that have action Click and Enter
+		// JSE is an alternative way to perform click, sendkey or other action on elements
+		//JSE should be used when cannot perform actions on element.
 		
 		WebElement nameTextBox = driver.findElement(By.xpath("//input[@id='name']"));
 		
